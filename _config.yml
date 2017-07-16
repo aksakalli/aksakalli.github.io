@@ -1,0 +1,38 @@
+title: Can Güney Aksakalli
+email: cgaksakalli@gmail.com
+description: >
+  Notes from my journey
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: aksakallic
+github_username:  aksakalli
+linkedin_username: aksakalli
+google_analytics: UA-99031292-1
+
+
+disqus:
+  shortname: aksakalli
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-gist
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+# Front Matter defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true

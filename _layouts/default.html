@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    <div class="container main-container">
+      <div class="hidden-print">
+        {% include header.html %}
+        <hr />
+      </div>
+      <main class="page-content mt-4 mb-4" aria-label="Content">
+
+          {{ content }}
+
+      </main>
+
+
+    </div>
+    <div class="hidden-print">
+      {% include footer.html %}
+    </div>
+    {% include js_files.html %}
+  </body>
+</html>
