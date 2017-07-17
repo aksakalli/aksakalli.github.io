@@ -40,3 +40,9 @@ tags:
 {% block headingcell scoped %}
 {{ '#' * cell.level }} {{ cell.source | replace('\n', ' ') }}
 {% endblock headingcell %}
+
+{%- block footer -%}
+<p>
+  <a type="button" href="/notebooks/{{resources['metadata']['name']}}.ipynb" class="btn btn-secondary btn-lg btn-block">Download the Notebook</a>
+</p>
+{%- endblock footer -%}

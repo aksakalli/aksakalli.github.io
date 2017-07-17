@@ -44,13 +44,10 @@ def markdown_changes(md):
 
   # convert inline maths: $y=x^2$ to $$y=x^2$$
   expr = re.compile('(?<!\$)\$(?!\$)')
-  print(expr)
   md = re.sub(expr, '$$', md)
 
   # header links
   md = re.sub(r'\(#.*?\)', lambda x: x.group(0).lower(), md, flags=re.M);
-
-
 
   return md
 

@@ -176,6 +176,8 @@ Here is the approximated similarity table for _MinHash_ sketches:
 |$$\overline{S}_B$$|0.33  |1     |0     |
 |$$\overline{S}_C$$|0.66  |0     |1     |
 
+## Conclusion
+
 This particular toy example demonstrates that, we can find out the most similar set to A with only using smaller sized sketches accurately.
 Since this is a random permutation based approximation method, the accuracy can differ based on sketch size and permutation functions.
 Another advantage is that, when a new set $$ D $$ arrives, we only need to compute 3x4 bit sized sketch and compare them with other sketches

@@ -26,6 +26,9 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - notebooks/jekyll.py
+  - notebooks/jekyll.tpl
 
 
 # Front Matter defaults
