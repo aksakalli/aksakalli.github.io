@@ -31,7 +31,7 @@ B = \{Apple, Banana, Strawberry, Peach, Blueberry, Orange\} \\
 C = \{Raspberry, Blueberry, Pear\}
 $$
 
-As the model shows us we have 2 intersected fruits over 8 union between sets $$ A $$ and $$ B $$,
+As the model shows, us we have 2 intersected fruits over 8 union between sets $$ A $$ and $$ B $$,
 so the Jaccard similarity for $$ A $$ and $$ B $$ yields:
 
 $$ J(A,B) = \frac{|A \cap B|}{|A \cup B|} = \frac{2}{8} = 0.25 $$
@@ -106,7 +106,7 @@ $$
 
 Back to our toy problem, we are going to use sketch size $$ t=3 $$, that means we need 3 permutation functions like $$\pi$$.
 Our set members are 4 bit integers  $$ 0, 1,..., 15 $$,
-so the permutation function is sucha as
+so the permutation function is such as
 $$ \pi: \mathbb{Z}_{15} \rightarrow \mathbb{Z}_{15} $$.
 Let our first first permutation functions $$ \pi_1 $$ be:
 

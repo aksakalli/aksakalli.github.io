@@ -9,8 +9,8 @@ tags:
   - C#
 ---
 
-I was working on a Windows desktop application at work.
-This application creates static web sites but I needed a local server to show it to the user before deploying.
+I was developing a Windows desktop application at work.
+This application creates static web sites and I needed a local server to show it to the user before deploying.
 Most platforms has one line command to serve given folder, so does Windows.
 If you have IIS Express you can run this command to serve the given folder:
 

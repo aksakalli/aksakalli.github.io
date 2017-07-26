@@ -12,7 +12,7 @@ This article aims to explain implementation of bug motion planning algorithms in
 [Webots](https://www.cyberbotics.com/) is a robot simulation environment widely used for educational purpose.
 You can edit environment with its GUI and write controller program for mobile robots in C, C++, Java, Python and MATLAB.
 It is very convenient tool to work on robotic algorithms, but it is not free.
-Fortunately I had Webots EDU license to work woth this tool.
+Fortunately, I had Webots EDU license to work with this tool.
 
 The robot knows the distance to goal and the direction.
 Here is the plan of the environment:
