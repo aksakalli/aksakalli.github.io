@@ -10,6 +10,8 @@ I'm currently studying Media Informatics M.Sc. at [RWTH Aachen University](http:
 
 ### Personal open source projects
 
+* [gtop](https://github.com/aksakalli/gtop) -
+System monitoring dashboard for terminal
 * [EsperIoT](https://github.com/aksakalli/EsperIoT) -
 Small and simple stream based CEP tool for IoT devices connected to a MQTT broker
 * [Jekyll Doc Theme](https://aksakalli.github.io/jekyll-doc-theme/) - Jekyll theme for creating project documentation websites
