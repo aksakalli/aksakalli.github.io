@@ -21,8 +21,10 @@ body {
   /* Set the fixed height of the footer here */
   // height: 160px;
   // line-height: 160px; /* Vertically center the text there */
-  background-color: $gray-lightest;
-  border-top: 1px solid $gray-lighter;
+  background-color: $gray-100;
+  // $gray-lightest;
+  border-top: $gray-400;
+  // $gray-lighter;
 }
 
 
