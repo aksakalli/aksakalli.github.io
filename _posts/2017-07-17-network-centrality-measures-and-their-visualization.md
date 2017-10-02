@@ -36,20 +36,21 @@ import matplotlib.colors as mcolors
 {% endhighlight %}
 
 First, we are defining a simple method to draw the graph and the centrality
-metrics of nodes as a heat map.
+metrics of nodes with a heat map.
 
 <!-- **In [2]:** -->
 
 {% highlight python %}
 def draw(G, pos, measures, measure_name):
     
-    nodes = nx.draw_networkx_nodes(G,pos, node_color=measures.values(),
-      nodelist=measures.keys(), cmap=plt.cm.plasma,label=['A','B'])
-    nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=0.01))
+    nodes = nx.draw_networkx_nodes(G, pos, node_size=250, cmap=plt.cm.plasma, 
+                                   node_color=measures.values(),
+                                   nodelist=measures.keys())
+    nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1))
     
     # labels = nx.draw_networkx_labels(G, pos)
     edges = nx.draw_networkx_edges(G, pos)
-    
+
     plt.title(measure_name)
     plt.colorbar(nodes)
     plt.axis('off')
@@ -57,11 +58,8 @@ def draw(G, pos, measures, measure_name):
 {% endhighlight %}
 
 Zachary’s Karate Club graph is defined as the example graph `G`.
-It is basically a social network of members of a university karate club,
+It is basically a social network of members of an university karate club,
 where undirected edges connects people who interact outside the club.
-However, please **be aware that**, not all centrality measures equally suit for
-determining centrality of nodes in a social network.
-I picked this graph as a sample input.
 
 <!-- **In [3]:** -->
 
@@ -79,11 +77,12 @@ Example.svg).
 
 {% highlight python %}
 DiG = nx.DiGraph()
-DiG.add_edges_from([(2,3),(3,2),(4,1),(4,2),(5,2),(5,4),(5,6),(6,2),(6,5)
-         ,(7,2),(7,5),(8,2),(8,5),(9,2),(9,5),(10,5),(11,5)])
-dpos = {1:[0.1, 0.9], 2:[0.4, 0.8], 3:[0.8, 0.9], 4:[0.15, 0.55], 
-  5:[0.5,  0.5], 6:[0.8,  0.5], 7: [0.22, 0.3], 8:[0.30, 0.27], 
-  9:[0.38, 0.24], 10: [0.7,  0.3], 11: [0.75, 0.35]}
+DiG.add_edges_from([(2, 3), (3, 2), (4, 1), (4, 2), (5, 2), (5, 4),
+                    (5, 6), (6, 2), (6, 5), (7, 2), (7, 5), (8, 2),
+                    (8, 5), (9, 2), (9, 5), (10, 5), (11, 5)])
+dpos = {1: [0.1, 0.9], 2: [0.4, 0.8], 3: [0.8, 0.9], 4: [0.15, 0.55],
+        5: [0.5,  0.5], 6: [0.8,  0.5], 7: [0.22, 0.3], 8: [0.30, 0.27],
+        9: [0.38, 0.24], 10: [0.7,  0.3], 11: [0.75, 0.35]}
 {% endhighlight %}
 
 ## Degree Centrality
@@ -137,7 +136,7 @@ important.
 Let's consider two nodes in a friend network with same degree,
 the one who is connected to more central nodes should be more central.
 
-First, we define a initial guess for the centrality of nodes in a graph as
+First, we define an initial guess for the centrality of nodes in a graph as
 $$x_i=1$$.
 Now we are going to iterate for the new centrality value $$x_i'$$ for node $$i$$ as
 following:
@@ -163,7 +162,7 @@ visualization.
 
 However, as we can see from the definition,
 it is a problematic measure for directed graphs.
-Let's say that a new research paper is published and it references a couple of
+Let's say that a new research paper is published and it references a handful of
 existing papers.
 It would not contribute to any of those referenced papers in this citation
 network
@@ -239,8 +238,9 @@ draw(DiG, dpos, nx.pagerank(DiG, alpha=0.85), 'DiGraph PageRank')
 ![png](/images/2017-07-17-network-centrality-measures-and-their-visualization_files/22_0.png)
 
 
-PageRank was introduced by the founders of Google to rank websites on the web.
-It can be considered as a extension of _Katz centrality_.
+PageRank was introduced by the founders of Google to rank websites in search
+results.
+It can be considered as an extension of _Katz centrality_.
 The websites on the web can be modeled as a directed graph,
 where hypermedia links between websites determines the edges.
 Let's consider a popular web directory website with high _Katz centrality_ value
@@ -266,7 +266,7 @@ max(k_i^{out}, 1) $$.
 
 As the drawing demonstrates, the nodes with fewer _out-degree_ contributes way
 more to each node compared the _Katz Centrality_. Here the node at the top right
-gets only reference of a very important node, and it becomes way important
+gets only reference of a very important node, and it becomes way more important
 compared to the _Katz Centrality_; on the other hand, the node in the center
 which gets contribution from high _out-degree_ nodes loses its importance.
 
@@ -314,8 +314,8 @@ $$
 $$
 
 with constant $$\beta$$. Here notice that the element of the adjacency matrix are
-swapped for _Hub Centrality_ because we are concerned with outgoing edges. So in
-matrix notation:
+swapped for _Hub Centrality_ because we are concerned with outgoing edges for
+hubs. So in matrix notation:
 
 $$
     \mathbf{x} = \alpha \mathbf{Ay}, \quad
@@ -341,8 +341,8 @@ draw(G, pos, nx.closeness_centrality(G), 'Closeness Centrality')
 
  _Closeness Centrality_ is a self explanatory measure where each node's
 importance is determined by closeness to all other nodes. Let $$d_{ij}$$ be the
-length of shortest path between $$i$$ and $$j$$, the average distance $$l_i$$ is such
-as:
+length of shortest path between nodes $$i$$ and $$j$$, the average distance $$l_i$$ is
+such as:
 
 $$
   l_i = \dfrac{1}{n} \sum_{j}d_{ij}
@@ -372,7 +372,7 @@ draw(G, pos, nx.betweenness_centrality(G), 'Betweenness Centrality')
 
 
 _Betweenness Centrality_ is another centrality that is based on shortest path
-between nodes. It is determined as number of shortest path passing by the given
+between nodes. It is determined as number of shortest paths passing by the given
 node. For starting node $$s$$, destination node $$t$$ and the input node $$i$$ that
 holds $$s \ne t \ne i$$, let $$n_{st}^i$$ be 1 if node $$i$$ lies on the shortest path
 between $$s$$ and $$t$$; and $$0$$ if not. So the _betweenness centrality_ is defined
