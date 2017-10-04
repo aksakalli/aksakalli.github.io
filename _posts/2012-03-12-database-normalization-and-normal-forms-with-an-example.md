@@ -67,7 +67,7 @@ To correct these anomalies, the new constraint is introduced:
 
 * Every non-key attribute functionally should depend on the primary key
 
-Regarding to this new constraint, the table is should be divided into three tables that every attribute has only functional primary key.
+Regarding this new constraint, the table should be divided into three tables that every attribute has only functional primary key.
 Now dependency model became like this:
 
 ![Dependency diagram for 2NF](/images/db-norm/2nf-dependency.png)
@@ -109,7 +109,7 @@ For this form following constraint is added:
 
 * All non key attributes should only depends on a primary key
 
-With this new constraint, country and language should be part of a individual table and country field should be the primary key of this new table.
+With this new constraint, country and language should be part of an individual table and country field should be the primary key of this new table.
 Here is the new dependency model:
 
 ![Dependency diagram for 3NF](/images/db-norm/3nf-dependency.png)

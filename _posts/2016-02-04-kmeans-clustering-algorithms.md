@@ -8,7 +8,7 @@ tags:
 ---
 
 _k_-means clustering is a method to partition $$n$$ observation into $$k$$ clusters where  $$k \ll n$$.
-Each observation $$x$$ belongs to a cluster $$C_i$$ with nearest mean $$\mu_i$$ compared to other clusters $$\mu_l$$:
+Each observation $$x$$ belongs to a cluster $$C_i$$ with the nearest mean $$\mu_i$$ compared to other clusters $$\mu_l$$:
 
 $$
   C_i = \{ x \in X | \| x-\mu_i \|^2 	\leq \| x-\mu_l \|^2  \}
@@ -25,7 +25,7 @@ Since $$ E(k) $$ has numerous local minima, there is no algorithm known today to
 ## Lloyd’s algorithm
 
 It is most widely known algorithm to solve _k_-means clustering
-and sometimes it is mistaken for the method itself. However it is:
+and sometimes it is mistaken for the method itself. However, it is:
 
 * Sensitive to the initialization of the means
 * Promise nothing about quality, hard to decide about number of iterations

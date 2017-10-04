@@ -103,6 +103,6 @@ Maintainer table
 
 In this approach, there exist a table for each concrete class.
 Every concrete class has a table with duplicated fields.
-In case of updating a field type of base class would require to migrate multiple tables.
+In case of updating a field type of the base class would require to migrate multiple tables.
 For example, if we change character size of `password` field, we need to alter both `Maintaner` and `Customer` tables.
 It might lead a conflict.

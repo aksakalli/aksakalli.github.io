@@ -35,7 +35,7 @@ It starts to move around this obstacle and the **infra-red sensors** control the
 
 Two GPS sensors are located in the robot to determine the position and angle of the target.
 Back GPS to center GPS angle is defined as "currentAngle", back GPS to target is defined as "targetAngle".
-(Although the accuracy of GPS wouldn't allow to determine this in real world, it was the a quite good approach for this environment I believe.)
+(Although the accuracy of GPS wouldn't allow to determine this in real world, it was a quite good approach for this environment I believe.)
 
 ![bug algorithm angles](/images/bug-angles.png)
 

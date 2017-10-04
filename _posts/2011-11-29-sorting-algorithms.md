@@ -11,7 +11,7 @@ tags:
 
 Complexity of an algorithm is determined as consumed resources like time and space.
 It depends not only on the number of input elements but also on their order.
-In this work, I tried to demonstrate how order of inputs effects the time complexity for different sorting algorithms.
+In this work, I tried to demonstrate how order of inputs affects the time complexity for different sorting algorithms.
 In particular, I experimented with quicksort, insertion sort and radix sort.
 Here are Big-O time complexities of these sorting algorithms:
 
@@ -59,7 +59,7 @@ Based on the result:
 * **Insertion Sort:** The best case is the already sorted input and the worst case is the already reverse sorted input.
 In this experiment, the task is to sort the numbers in descending so `data3.txt` is the best case and `data1.txt` is the worst case.
 * **Radix Sort::** The run-times are almost the same for all inputs because radix sort's performance is independent from input order.
-Thus linearly sorted inputs are not worst or best case for insertion sort.
+Thus, linearly sorted inputs are not worst or best case for insertion sort.
 
 This experiment shows that, order of the input is important as input size.
 Although size of inputs are the same, the order changes the runtime dramatically.

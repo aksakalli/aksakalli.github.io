@@ -20,7 +20,7 @@ Let $$ A $$ and $$ B $$ be two sets and Jaccard similarity $$ J $$ is a measure 
 
 $$ J(A,B) = \frac{|A \cap B|}{|A \cup B|} $$
 
-To demonstrate the method, lets consider a toy example where we try to measure similarity between three fruit baskets in terms of common fruit types.
+To demonstrate the method, let's consider a toy example where we try to measure similarity between three fruit baskets in terms of common fruit types.
 We see the baskets as sets with distinct fruits:
 
 ![Jaccard similarity of fruit boxes](/images/jaccard-sets-fruits.png)
@@ -108,7 +108,7 @@ Back to our toy problem, we are going to use sketch size $$ t=3 $$, that means w
 Our set members are 4 bit integers  $$ 0, 1,..., 15 $$,
 so the permutation function is such as
 $$ \pi: \mathbb{Z}_{15} \rightarrow \mathbb{Z}_{15} $$.
-Let our first first permutation functions $$ \pi_1 $$ be:
+Let our first permutation function $$ \pi_1 $$ be:
 
 $$
 \pi_1 =

@@ -51,7 +51,7 @@ private void Listen()
 }
 ```
 
-This while loop is endless and it process the context in a private method whenever a new context appears.
+This while loop is endless and it processes the context in a private method whenever a new context appears.
 Since this method is synchronous, your UI would become unresponsive.
 That's why we need to run it as a new thread when our `SimpleHTTPServer` is constructed.
 

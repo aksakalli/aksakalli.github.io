@@ -100,7 +100,7 @@ draw(G, pos, nx.degree_centrality(G), 'Degree Centrality')
 _Degree_ of a node is basically number of edges that it has.
 The basic intuition is that, nodes with more connections are
 more influential and important in a network.
-In another words, the person with higher friend count in a social network,
+In other words, the person with higher friend count in a social network,
 the more cited paper (_in-degree_) in a scientific citation network
 is the one that is more central according to this metric.
 
@@ -145,7 +145,7 @@ $$
   x_i' = \sum_{j} A_{ij}x_j
 $$
 
-Here $$ A_{ij} $$ is a element of _the adjacency matrix_,
+Here $$ A_{ij} $$ is an element of _the adjacency matrix_,
 where it gives $$ 1 $$ or $$ 0 $$ for whether an edge exists between nodes $$ i $$ and
 $$ j $$.
 it can also be written in matrix notation as $$ \mathbf{x'} = \mathbf{Ax} $$.
@@ -204,7 +204,7 @@ $$
     x_i = \alpha \sum_{j} A_{ij} x_j + \beta,
 $$
 
-again $$ A_{ij} $$ is a element of _the adjacency matrix_,
+again $$ A_{ij} $$ is an element of _the adjacency matrix_,
 and it can also be written in matrix notation as $$ \mathbf{x} = \alpha
 \mathbf{Ax} + \beta \mathbf{1} $$.
 This $$ \beta $$ constant gives a _free_ centrality contribution for all nodes
@@ -290,7 +290,7 @@ draw(DiG, dpos, a, 'DiGraph HITS Authorities')
 
 Up until this point, we have discussed the measures that captures high node
 centrality, however, there can be nodes in the network which are important for
-the network but they are not central. In particular, let's consider a survey
+the network, but they are not central. In particular, let's consider a survey
 (review) article in a scientific citation network. The article itself is not
 necessarily stating a new discovery and it is not central; but nevertheless it
 is a helpful material to acquire knowledge on a topic because it captures a lot
@@ -339,10 +339,10 @@ draw(G, pos, nx.closeness_centrality(G), 'Closeness Centrality')
 ![png](/images/2017-07-17-network-centrality-measures-and-their-visualization_files/28_0.png)
 
 
- _Closeness Centrality_ is a self explanatory measure where each node's
+ _Closeness Centrality_ is a self-explanatory measure where each node's
 importance is determined by closeness to all other nodes. Let $$d_{ij}$$ be the
-length of shortest path between nodes $$i$$ and $$j$$, the average distance $$l_i$$ is
-such as:
+length of the shortest path between nodes $$i$$ and $$j$$, the average distance
+$$l_i$$ is such as:
 
 $$
   l_i = \dfrac{1}{n} \sum_{j}d_{ij}
@@ -355,7 +355,7 @@ $$
   C_i = \dfrac{1}{l_i} = \dfrac{n}{\sum_{j}d_{ij}}
 $$
 
-Here we are using a _unweighted_ graph and all edges have weight $$1$$ distance
+Here we are using an _unweighted_ graph and all edges have weight $$1$$ distance
 cost for calculating shortest path length $$d_{ij}$$. This measure can be used to
 determine the central distribution point in a delivery network.
 
@@ -372,11 +372,11 @@ draw(G, pos, nx.betweenness_centrality(G), 'Betweenness Centrality')
 
 
 _Betweenness Centrality_ is another centrality that is based on shortest path
-between nodes. It is determined as number of shortest paths passing by the given
-node. For starting node $$s$$, destination node $$t$$ and the input node $$i$$ that
-holds $$s \ne t \ne i$$, let $$n_{st}^i$$ be 1 if node $$i$$ lies on the shortest path
-between $$s$$ and $$t$$; and $$0$$ if not. So the _betweenness centrality_ is defined
-as:
+between nodes. It is determined as number of the shortest paths passing by the
+given node. For starting node $$s$$, destination node $$t$$ and the input node $$i$$
+that holds $$s \ne t \ne i$$, let $$n_{st}^i$$ be 1 if node $$i$$ lies on the shortest
+path between $$s$$ and $$t$$; and $$0$$ if not. So the _betweenness centrality_ is
+defined as:
 
 $$
   x_i = \sum_{st} n_{st}^i
