@@ -14,7 +14,7 @@ $$
   C_i = \{ x \in X | \| x-\mu_i \|^2 	\leq \| x-\mu_l \|^2  \}
 $$
 
-The objection function is based on optimizing the sum of squared distances of each observation to its cluster mean.   
+The objective function is to minimize the sum of squared distances of each observation to its cluster mean.   
 
 $$
 \operatorname*{argmin}_{\mu_i,...,\mu_k} E(k) = \sum_{i=1}^{k} \sum_{x_j \in C_i}  \|x_j-\mu_i \|^2
