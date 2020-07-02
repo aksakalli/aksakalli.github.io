@@ -6,10 +6,14 @@ permalink: /about/
 
 
 Hi there, and thanks for checking out my little space on the web.
-I'm currently studying Media Informatics M.Sc. at [RWTH Aachen University](http://www.rwth-aachen.de/).
+I studied Media Informatics M.Sc. at [RWTH Aachen University](http://www.rwth-aachen.de/) and
+I am currently working at [TomTom](https://github.com/tomtom-international)
+on improving the road traffic info quality with data.
 
-### Personal open source projects
+### Open-source Projects
 
+* [openlr-python](https://github.com/tomtom-international/openlr-python) -
+Implementation of OpenLR&trade; dynamic location referencing standard in Python
 * [gtop](https://github.com/aksakalli/gtop) -
 System monitoring dashboard for terminal
 * [EsperIoT](https://github.com/aksakalli/EsperIoT) -
@@ -24,6 +28,7 @@ Small and simple stream based CEP tool for IoT devices connected to a MQTT broke
 
 ### Publications
 
+* **_Predicting Emerging Trends in Citation Networks_** Aksakalli, Can Güney, Master Thesis. [[pdf](https://publications.rwth-aachen.de/record/720053/files/720053.pdf)]
 * **_Minhashing for Graph Similarity Computation._** Aksakalli, Can Güney and Pascal Welke, CSCUBS 2016.
 [[pdf](http://cscubs.cs.uni-bonn.de/2016/proceedings/paper-07.pdf)]
 [[slides](/files/Minhashing-for-Graph-Similarity-Computation(slides).pdf)]
@@ -36,6 +41,9 @@ Small and simple stream based CEP tool for IoT devices connected to a MQTT broke
 
 ### Music
 
+I am part of the Organisation group of a multi-cultural world music orchestra called
+[FolkBerlin](https://folkberlin.github.io/) (a.k.a. FolkBär).
+
 I like playing guitar, also I recorded some songs with my band.
 [[audio](https://soundcloud.com/karabuyu)]
 [[video](https://www.youtube.com/watch?v=SjMDim5NBMQ)]
@@ -47,7 +55,7 @@ I like playing guitar, also I recorded some songs with my band.
 
 <p>
   <small>
-    <strong>Disclamer:</strong>
+    <strong>Disclaimer:</strong>
     The content of this website represents my personal opinion and not authorized by any of the companies or institutions which I am affiliated with.
   </small>
 </p>
