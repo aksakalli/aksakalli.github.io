@@ -7,14 +7,14 @@ source for: [aksakalli.github.io](http://aksakalli.github.io/)
 You need Ruby and gem before starting, then:
 
 ```bash
-# install jekyll and bundler
-gem install jekyll bundler
+# install bundler
+gem install bundler
 
 # install dependencies
 bundle install
 
-# run jekyll
-jekyll serve
+# run jekyll with dependencies
+bundle exec jekyll serve
 ```
 
 ## Converting Notebooks
