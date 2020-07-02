@@ -32,6 +32,7 @@ Small and simple stream based CEP tool for IoT devices connected to a MQTT broke
 * **_Minhashing for Graph Similarity Computation._** Aksakalli, Can Güney and Pascal Welke, CSCUBS 2016.
 [[pdf](http://cscubs.cs.uni-bonn.de/2016/proceedings/paper-07.pdf)]
 [[slides](/files/Minhashing-for-Graph-Similarity-Computation(slides).pdf)]
+[[code](https://github.com/aksakalli/graph-min-hash)]
 * **_A mobile plant identification application for environmental monitoring._** Turkay, C., C.G. Aksakalli, K. Ozmal, and H.K. Ekenel, SIU 2013.
 [[paper](http://ieeexplore.ieee.org/document/6531503/)]
 

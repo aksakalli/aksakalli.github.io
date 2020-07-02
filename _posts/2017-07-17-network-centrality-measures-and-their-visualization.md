@@ -21,8 +21,9 @@ Here is the list of different metrics to find it, which I would like to discuss:
 * [Betweenness Centrality](#betweenness-centrality)
 
 
-I will be using [NetworkX Python](https://networkx.github.io/) (v1.11) library
-along with [Matplotlib](https://matplotlib.org/) (v2.0.0).
+I will be using [NetworkX Python](https://networkx.github.io/) (2.4) library
+along with [Matplotlib](https://matplotlib.org/) (3.2.2). (Updated on
+01.06.2020)
 
 <!-- **In [1]:** -->
 
@@ -65,7 +66,7 @@ where undirected edges connects people who interact outside the club.
 
 {% highlight python %}
 G = nx.karate_club_graph()
-pos = nx.spring_layout(G)
+pos = nx.spring_layout(G, seed=675)
 {% endhighlight %}
 
 We also need a directed graph to demonstrate some other centrality measures.
@@ -90,6 +91,20 @@ dpos = {1: [0.1, 0.9], 2: [0.4, 0.8], 3: [0.8, 0.9], 4: [0.15, 0.55],
 <!-- **In [5]:** -->
 
 {% highlight python %}
+def draw(G, pos, measures, measure_name):
+    
+    nodes = nx.draw_networkx_nodes(G, pos, node_size=250, cmap=plt.cm.plasma, 
+                                   node_color=list(measures.values()),
+                                   nodelist=measures.keys())
+    nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1, base=10))
+    # labels = nx.draw_networkx_labels(G, pos)
+    edges = nx.draw_networkx_edges(G, pos)
+
+    plt.title(measure_name)
+    plt.colorbar(nodes)
+    plt.axis('off')
+    plt.show()
+
 draw(G, pos, nx.degree_centrality(G), 'Degree Centrality')
 {% endhighlight %}
 
