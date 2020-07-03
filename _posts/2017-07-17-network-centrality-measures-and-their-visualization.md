@@ -45,10 +45,9 @@ metrics of nodes with a heat map.
 def draw(G, pos, measures, measure_name):
     
     nodes = nx.draw_networkx_nodes(G, pos, node_size=250, cmap=plt.cm.plasma, 
-                                   node_color=measures.values(),
+                                   node_color=list(measures.values()),
                                    nodelist=measures.keys())
-    nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1))
-    
+    nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1, base=10))
     # labels = nx.draw_networkx_labels(G, pos)
     edges = nx.draw_networkx_edges(G, pos)
 
@@ -91,20 +90,6 @@ dpos = {1: [0.1, 0.9], 2: [0.4, 0.8], 3: [0.8, 0.9], 4: [0.15, 0.55],
 <!-- **In [5]:** -->
 
 {% highlight python %}
-def draw(G, pos, measures, measure_name):
-    
-    nodes = nx.draw_networkx_nodes(G, pos, node_size=250, cmap=plt.cm.plasma, 
-                                   node_color=list(measures.values()),
-                                   nodelist=measures.keys())
-    nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1, base=10))
-    # labels = nx.draw_networkx_labels(G, pos)
-    edges = nx.draw_networkx_edges(G, pos)
-
-    plt.title(measure_name)
-    plt.colorbar(nodes)
-    plt.axis('off')
-    plt.show()
-
 draw(G, pos, nx.degree_centrality(G), 'Degree Centrality')
 {% endhighlight %}
 
