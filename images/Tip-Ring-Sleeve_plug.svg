@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="463" height="736">
+<linearGradient id="s" gradientUnits="userSpaceOnUse" x1="114" x2="282">
+ <stop offset="0" stop-color="#666"/>
+ <stop offset=".5" stop-color="#CCC"/>
+ <stop offset="1" stop-color="#666"/>
+</linearGradient>
+<linearGradient id="i" gradientUnits="userSpaceOnUse" x1="148" x2="248">
+ <stop offset="0" stop-color="#000"/>
+ <stop offset=".5" stop-color="#555"/>
+ <stop offset="1" stop-color="#000"/>
+</linearGradient>
+<path fill="url(#s)" d="m148,494V220q3-6 6-7l13-10q9-7
+0-28l-15-41q-3-6 0-15l18-29q5-5 10-5h36q5,0 10,5l18,29q3,9
+0,15l-15,41q-9,21 0,28l13,10q3,1 6,7V494M114,492h168v14H114"/>
+<path stroke="#888" d="m114,492h168"/>
+<path fill="url(#i)" d="m148,220h100v17H148m0,69h100v17H148"/>
+<rect x="66" y="506" width="264" height="300" rx="26"/>
+<text font-size="48" x="280" y="190">&lt; Tip<tspan x="280" y="290">&lt; Ring</tspan>
+<tspan x="280" y="400">&lt; Sleeve</tspan></text>
+</svg>
